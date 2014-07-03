@@ -1,0 +1,8 @@
+﻿{% extends "layout.html" %}
+{% block result_image %}
+<h1>{{species_name}}</h1>
+<img src="../static/fullsize/{{ species_alpha }}.jpg"/>
+{% endblock %}
+{% block result_content %}
+<p>The most recent reported observation of a <strong>{{species_name}}</strong> was greater than 30 days ago.</p>
+{% endblock %}
