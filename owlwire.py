@@ -85,10 +85,12 @@ def select():
     #FORMATS RESULTS FOR DISPLAY AND RENDERS TO TEMPLATE
     location_name = ((observation.findall("./result/sighting/loc-name"))[-1])
     latitude = ((observation.findall("./result/sighting/lat"))[-1])
+    latitude = latitude.text
     longitude = ((observation.findall("./result/sighting/lng"))[-1])
+    longitude = longitude.text
     date = str(most_recent.strftime('%A, %Y-%m-%d'))
-    location = location_name.text+" ("+latitude.text+", "+longitude.text+")"
-    return render_template("result.html", location = location, date = date, species_alpha = species_alpha, species_name = species_name, species_sci = species_sci)
+    location = location_name.text+" ("+latitude+", "+longitude+")"
+    return render_template("result.html", location = location, latitude = latitude, longitude = longitude, date = date, species_alpha = species_alpha, species_name = species_name, species_sci = species_sci)
 
 
 if __name__ == "__main__":
