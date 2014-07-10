@@ -4,17 +4,21 @@ background-color: #234311;
 p {
 color: #F1DD9E;
 text-align: center;
+font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 h2 {
 text-align: center;
 color: #F1DD9E;
+font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 h3 {
 color: #F1DD9E;
 text-align: center;
+font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 a {
 color: #DCDB45;
+font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
 
@@ -70,7 +74,9 @@ vertical-align: middle;
 #attribution h2 {
 text-align: left;
 color: #F1DD9E;
+font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 #attribution p {
 text-align: left;
+font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
