@@ -5,7 +5,7 @@
 <p id="species_sci_name"><i>{{species_sci}}</i></p>
 {% endblock %}
 {% block result_content %}
-<iframe width="300" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?z=6q={{latitude}}%2C%20{{longitude}}&key=AIzaSyDpfSzqc6lCB_cNgZLf-0vKdjF9FNqKCAw"></iframe>
+<iframe width="300" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?z=6&q={{latitude}}%2C%20{{longitude}}&key=AIzaSyDpfSzqc6lCB_cNgZLf-0vKdjF9FNqKCAw"></iframe>
 <p>{{species_name}} was reported on <strong>{{date}}</strong> at <strong>{{location}}.</strong></p>
 <a href="https://www.google.com/maps/place/{{latitude}},{{longitude}}/@{{latitude}},{{longitude}},6z/">View on Google Maps</a>
 {% endblock %}
