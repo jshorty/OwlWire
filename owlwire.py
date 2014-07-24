@@ -69,19 +69,35 @@ def select():
     if (len(usa_raw_date) == 0) and (len(canada_raw_date) == 0):
         return render_template("not_found.html", species_name = species_name, species_alpha = species_alpha)
     elif (len(usa_raw_date) != 0) and (len(canada_raw_date) != 0):
-        usa_date = datetime.datetime.strptime(usa_raw_date[-1].childNodes[0].nodeValue, '%Y-%m-%d %H:%M')   
-        canada_date = datetime.datetime.strptime(canada_raw_date[-1].childNodes[0].nodeValue, '%Y-%m-%d %H:%M')
+        while True:
+            try:
+                usa_date = datetime.datetime.strptime(usa_raw_date[-1].childNodes[0].nodeValue, '%Y-%m-%d %H:%M')   
+                canada_date = datetime.datetime.strptime(canada_raw_date[-1].childNodes[0].nodeValue, '%Y-%m-%d %H:%M')
+                date_includes_time = True
+            except ValueError:
+                usa_date = datetime.datetime.strptime(usa_raw_date[-1].childNodes[0].nodeValue, '%Y-%m-%d')   
+                canada_date = datetime.datetime.strptime(canada_raw_date[-1].childNodes[0].nodeValue, '%Y-%m-%d')
+                date_includes_time = False
         most_recent = max(usa_date, canada_date)
         if most_recent == usa_date:
             observation = ET.fromstring(usa_xml.content)
         elif most_recent == canada_date:
             observation = ET.fromstring(canada_xml.content)
     elif (len(usa_raw_date) != 0) and (len(canada_raw_date) == 0):
-        most_recent = datetime.datetime.strptime(usa_raw_date[-1].childNodes[0].nodeValue, '%Y-%m-%d %H:%M') 
-        observation = ET.fromstring(usa_xml.content)
+        if (date_includes_time == True):
+            most_recent = datetime.datetime.strptime(usa_raw_date[-1].childNodes[0].nodeValue, '%Y-%m-%d %H:%M') 
+            observation = ET.fromstring(usa_xml.content)
+        elif (date_includes_time == False):
+            most_recent = datetime.datetime.strptime(usa_raw_date[-1].childNodes[0].nodeValue, '%Y-%m-%d') 
+            observation = ET.fromstring(usa_xml.content)
     elif (len(usa_raw_date) == 0) and (len(canada_raw_date) != 0):
-        most_recent = datetime.datetime.strptime(canada_raw_date[-1].childNodes[0].nodeValue, '%Y-%m-%d %H:%M') 
-        observation = ET.fromstring(canada_xml.content)
+        if (date_includes_time == True):
+            most_recent = datetime.datetime.strptime(canada_raw_date[-1].childNodes[0].nodeValue, '%Y-%m-%d %H:%M') 
+            observation = ET.fromstring(canada_xml.content)
+        elif (date_includes_time == False):
+            most_recent = datetime.datetime.strptime(canada_raw_date[-1].childNodes[0].nodeValue, '%Y-%m-%d') 
+            observation = ET.fromstring(canada_xml.content)
+
     #FORMATS RESULTS FOR DISPLAY AND RENDERS TO TEMPLATE
     location_name = ((observation.findall("./result/sighting/loc-name"))[-1])
     latitude = ((observation.findall("./result/sighting/lat"))[-1])
