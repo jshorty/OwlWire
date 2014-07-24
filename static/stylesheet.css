@@ -69,7 +69,12 @@ height: 400px;
 display: inline-block;
 vertical-align: middle;
 }
-
+#species_common_name {
+margin: 0 0 0 0;
+}
+#species_sci_name {
+margin: 0 0 0 0;
+}
 
 #attribution h2 {
 text-align: left;

@@ -1,10 +1,11 @@
 {% extends "layout.html" %}
 {% block result_image %}
 <img src="../static/fullsize/{{ species_alpha }}.jpg"/>
+<h2 id="species_common_name">{{species_name}}</h2>
+<p id="species_sci_name"><i>{{species_sci}}</i></p>
 {% endblock %}
 {% block result_content %}
-<h2>{{species_name}}</h2>
-<h2><i>{{species_sci}}</i></h2>
-<p>The most recent reported observation of a <strong>{{species_name}}</strong> was on <strong>{{date}}</strong> at <strong>{{location}}.</strong></p>
+<iframe width="300" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q={{latitude}}%2C%20{{longitude}}&key=AIzaSyCVGavrNOh9foi_zktyHkkMblgv_Cg_d_E"></iframe>
+<p>{{species_name}} was reported on <strong>{{date}}</strong> at <strong>{{location}}.</strong></p>
 <a href="https://www.google.com/maps/place/{{latitude}},{{longitude}}/@{{latitude}},{{longitude}},6z/">View on Google Maps</a>
 {% endblock %}
