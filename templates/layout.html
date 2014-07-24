@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OwlWire</title>
-  <link rel="stylesheet" href="../static/stylesheet.css" type="text/css">
+	<title>OwlWire</title>
+	<link rel="stylesheet" href="../static/stylesheet.css" type="text/css">
 </head>
 <body>
 
 
 <div id="wrap">
-
-  <div id="result_image">
-    {% block result_image %}
-    {% endblock %}
-  </div>
-
-  <div id="main">
-    <img id="owlwire" src="../static/owlwire.svg"/>
-    <form action="/select" method="POST">
-      <div>
-        <input id="BARRED" type=image src="../static/BDOW.jpg" title="Barred Owl" name="OWL" value="BDOW"/>
-        <input type=image src="../static/SPOW.jpg" title="Spotted Owl" name="OWL" value="SPOW"/>
-        <input type=image src="../static/GGOW.jpg" title="Great Gray Owl" name="OWL" value="GGOW"/>
-      </div>
-      <div>
-        <input type=image src="../static/GHOW.jpg" title="Great Horned Owl" name="OWL" value="GHOW"/>
-        <input type=image src="../static/SNOW.jpg" title ="Snowy Owl" name="OWL" value="SNOW"/>
-        <input type=image src="../static/LEOW.jpg" title="Long-eared Owl" name="OWL" value="LEOW"/>
-        <input type=image src="../static/SEOW.jpg" title="Short-eared Owl" name="OWL" value="SEOW"/>
-      </div>
-      <div>
-        <input type=image src="../static/BNOW.jpg" title="Barn Owl" name="OWL" value="BNOW"/>
-        <input type=image src="../static/ESOW.jpg" title="Eastern Screech-Owl" name="OWL" value="ESOW"/>
-        <input type=image src="../static/WESO.jpg" title="Western Screech-Owl" name="OWL" value="WESO"/>
-        <input type=image src="../static/WHSO.jpg" title="Whiskered Screech-Owl" name="OWL" value="WHSO"/>
-        <input type=image src="../static/FLOW.jpg" title="Flammulated Owl" name="OWL" value="FLOW"/>
-      </div>
-      <div>
-        <input type=image src="../static/BOOW.jpg" title="Boreal Owl" name="OWL" value="BOOW"/>
-        <input type=image src="../static/NSWO.jpg" title="Northern Saw-whet Owl" name="OWL" value="NSWO"/>
-        <input type=image src="../static/NPOW.jpg" title="Northern Pygmy-Owl" name="OWL" value="NPOW"/>
-        <input type=image src="../static/FPOW.jpg" title="Ferruginous Pygmy-Owl" name="OWL" value="FPOW"/>
-      </div>
-      <div>
-        <input type=image src="../static/ELOW.jpg" title="Elf Owl" name="OWL" value="ELOW"/>
-        <input type=image src="../static/BUOW.jpg" title="Burrowing Owl" name="OWL" value="BUOW"/>
-        <input type=image src="../static/NHOW.jpg" title="Northern Hawk Owl" name="OWL" value="NHOW"/>
-      </div>
-    </form>
-  </div>
-
-  <div id="result_content">
-    {% block result_content %}
-    {% endblock %}
-  </div>
-
+<div id="result_image">
+	{% block result_image %}
+	{% endblock %}
 </div>
 
+
+
+<div id="main">
+	<img id="owlwire" src="../static/owlwire.svg"/>
+	<form action="/select" method="POST">
+ 		<div>
+			<input id="BARRED" type=image src="../static/BDOW.jpg" title="Barred Owl" name="OWL" value="BDOW"/>
+			<input type=image src="../static/SPOW.jpg" title="Spotted Owl" name="OWL" value="SPOW"/>
+			<input type=image src="../static/GGOW.jpg" title="Great Gray Owl" name="OWL" value="GGOW"/>
+		</div>
+		<div>
+			<input type=image src="../static/GHOW.jpg" title="Great Horned Owl" name="OWL" value="GHOW"/>
+			<input type=image src="../static/SNOW.jpg" title ="Snowy Owl" name="OWL" value="SNOW"/>
+			<input type=image src="../static/LEOW.jpg" title="Long-eared Owl" name="OWL" value="LEOW"/>
+			<input type=image src="../static/SEOW.jpg" title="Short-eared Owl" name="OWL" value="SEOW"/>
+		</div>
+		<div>
+			<input type=image src="../static/BNOW.jpg" title="Barn Owl" name="OWL" value="BNOW"/>
+			<input type=image src="../static/ESOW.jpg" title="Eastern Screech-Owl" name="OWL" value="ESOW"/>
+			<input type=image src="../static/WESO.jpg" title="Western Screech-Owl" name="OWL" value="WESO"/>
+			<input type=image src="../static/WHSO.jpg" title="Whiskered Screech-Owl" name="OWL" value="WHSO"/>
+			<input type=image src="../static/FLOW.jpg" title="Flammulated Owl" name="OWL" value="FLOW"/>
+		</div>
+		<div>
+			<input type=image src="../static/BOOW.jpg" title="Boreal Owl" name="OWL" value="BOOW"/>
+			<input type=image src="../static/NSWO.jpg" title="Northern Saw-whet Owl" name="OWL" value="NSWO"/>
+			<input type=image src="../static/NPOW.jpg" title="Northern Pygmy-Owl" name="OWL" value="NPOW"/>
+			<input type=image src="../static/FPOW.jpg" title="Ferruginous Pygmy-Owl" name="OWL" value="FPOW"/>
+		</div>
+		<div>
+			<input type=image src="../static/ELOW.jpg" title="Elf Owl" name="OWL" value="ELOW"/>
+			<input type=image src="../static/BUOW.jpg" title="Burrowing Owl" name="OWL" value="BUOW"/>
+			<input type=image src="../static/NHOW.jpg" title="Northern Hawk Owl" name="OWL" value="NHOW"/>
+		</div>
+	</form>
+</div>
+
+
+
+<div id="result_content">
+{% block result_content %}
+{% endblock %}
+</div>
+</div>
+</div>
+
+
+
 <div id="footer_message">
-  <p>Data is provided by the Cornell Lab of Ornithology through the <a href="https://confluence.cornell.edu/display/CLOISAPI/eBird+API+1.1">eBird API</a>. All images are in the public domain or licensed in the Creative Commons, attribution information can be found <a href="/attribution">here</a>.</p>
+<p>Data is provided by the Cornell Lab of Ornithology through the <a href="https://confluence.cornell.edu/display/CLOISAPI/eBird+API+1.1">eBird API</a>. All images are in the public domain or licensed in the Creative Commons, attribution information can be found <a href="/attribution">here</a>.</p>
 </div>
 
 </body>
