@@ -21,7 +21,10 @@ color: #FFFFFF;
 font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
-
+#title_banner {
+width: 100%;
+text-align: center;
+}
 
 #wrap {
 width: 100%;
