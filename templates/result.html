@@ -1,11 +1,19 @@
 {% extends "layout.html" %}
+
 {% block result_image %}
-<img src="../static/fullsize/{{ species_alpha }}.jpg"/>
-<h2 id="species_common_name">{{species_name}}</h2>
-<p id="species_sci_name"><i>{{species_sci}}</i></p>
+  <div id="result_image">
+    <div id="result_image_proper">
+      <img src="../static/fullsize/{{ species_alpha }}.jpg"/>
+    </div>
+    <h2 id="species_common_name">{{species_name}}</h2>
+    <p id="species_sci_name"><i>{{species_sci}}</i></p>
+  </div>
 {% endblock %}
+
 {% block result_content %}
-<iframe width="300" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q={{latitude}}%2C%20{{longitude}}&key=AIzaSyDpfSzqc6lCB_cNgZLf-0vKdjF9FNqKCAw&zoom=6"></iframe>
-<p>{{species_name}} was reported on <strong>{{date}}</strong> at <strong>{{location}}.</strong></p>
-<a href="https://www.google.com/maps/place/{{latitude}},{{longitude}}/@{{latitude}},{{longitude}},6z/">View on Google Maps</a>
+  <div id="result_content"
+    <iframe id= width="300" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q={{latitude}}%2C%20{{longitude}}&key=AIzaSyDpfSzqc6lCB_cNgZLf-0vKdjF9FNqKCAw&zoom=6"></iframe>
+    <p>{{species_name}} was reported on <strong>{{date}}</strong> at <strong>{{location}}.</strong></p>
+    <a href="https://www.google.com/maps/place/{{latitude}},{{longitude}}/@{{latitude}},{{longitude}},6z/">View on Google Maps</a>
+  </div>
 {% endblock %}

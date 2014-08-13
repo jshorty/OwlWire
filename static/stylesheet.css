@@ -21,35 +21,20 @@ color: #FFFFFF;
 font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
+#body_wrapper {
+text-align: center;
+}
+
 #title_banner {
 width: 100%;
 text-align: center;
 }
 
-#wrap {
-width: 100%;
-text-align: center;
-}
-
-
-
-#result_image {
-width: 300px;
-display: inline-block;
-vertical-align: middle;
-overflow: hidden;
-position: relative;
-}
-#result_image img {
-width: 100%;
-}
-
-
-
 #main {
 text-align: center;
 width: 50%;
 display: inline-block;
+margin: auto;
 vertical-align: middle;
 }
 input {
@@ -63,7 +48,34 @@ border: 3px solid #F1DD9E;
 border-radius: 15px;
 }
 
+#result_image_wrapper {
+display: inline-block;
+}
+#result_image {
+margin: 0 auto;
+width: 300px;
+height: 400px;
+display: inline-block;
+vertical-align: middle;
+overflow: hidden;
+position: relative;
+text-align: center;
+}
 
+#result_image_proper {
+width: 300px;
+height: 300px;
+overflow: hidden;
+}
+
+#result_image_proper img {
+margin: 0 auto;
+width: 100%;
+}
+
+#result_content_wrapper {
+display: inline-block;
+}
 
 #result_content {
 margin: 0 auto;
