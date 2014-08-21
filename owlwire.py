@@ -65,7 +65,10 @@ def find_obs_in_xml(xml_with_obs_dt):
 
 #CONVERTS OBSERVATION TO DATETIME OBJECT FOR COMPARISON (TO LATER FIND MOST RECENT)
 def convert_obs_to_datetime(observation):
-    converted = datetime.datetime.strptime(observation[-1].childNodes[0].nodeValue, '%Y-%m-%d %H:%M')
+    try:
+        converted = datetime.datetime.strptime(observation[-1].childNodes[0].nodeValue, '%Y-%m-%d %H:%M')
+    except ValueError: #HANDLES EXCEPTIONS: SOMETIMES OBSERVATION DOES NOT INCLUDE TIME OF DAY
+        converted = datetime.datetime.strptime(observation[-1].childNodes[0].nodeValue, '%Y-%m-%d')
     return converted
 
 #TAKES A DICTIONARY OF COUNTRY-SPECIFIC REPORTS AND DETERMINES THE MOST RECENT
