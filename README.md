@@ -1,1 +1,7 @@
-OwlWire is a Python script using the flask framework to view the most recent sightings of North American owls by querying the eBird API (https://confluence.cornell.edu/display/CLOISAPI/eBird+API+1.1) for the most recent report data on a given species. HTML framework and CSS are included to make it look nice.
+Owlwire allows you to see the most recent report of any North American owl.
+The app sends queries the Cornell Laboratory of Ornithology's eBird API and
+returns a result using a Google Maps embed. This was a personal project for
+learning how to build a web app with Flask and Python, and only works fully
+in Chrome or Safari. Enjoy!
+
+Owlwire is currently hosted at (http://jshorty.pythonanywhere.com)
