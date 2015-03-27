@@ -1,102 +1,98 @@
 ﻿body {
-background-color: #234311;
+  background-color: #234311;
+  color: #F1DD9E;
+  text-align: center;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
-p {
-color: #F1DD9E;
-text-align: center;
-font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-}
-h2 {
-text-align: center;
-color: #F1DD9E;
-font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-}
-h3 {
-color: #F1DD9E;
-text-align: center;
-font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-}
+
+
 a {
-color: #FFFFFF;
-font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  color: #FFFFFF;
 }
 
 #body_wrapper {
-text-align: center;
+  text-align: center;
 }
 
 #title_banner {
-width: 100%;
-text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 #main {
-text-align: center;
-width: 50%;
-display: inline-block;
-margin: auto;
-vertical-align: middle;
+  text-align: center;
+  width: 50%;
+  display: inline-block;
+  margin: 0 auto 50px auto;
+  vertical-align: middle;
 }
+
+#main form {
+  display: block;
+}
+
 input {
-height: 80px;
-width: 80px;
-border: 3px solid #234311;
-border-radius: 10px
+  height: 80px;
+  width: 80px;
+  border: 3px solid #234311;
+  border-radius: 10px
 }
+
 input:hover {
-border: 3px solid #F1DD9E;
-border-radius: 15px;
+  border: 3px solid #F1DD9E;
+  border-radius: 15px;
 }
 
 #result_image_wrapper {
-display: inline-block;
+  display: inline-block;
 }
+
 #result_image {
-margin: 0 auto;
-width: 300px;
-height: 400px;
-display: inline-block;
-vertical-align: middle;
-overflow: hidden;
-position: relative;
-text-align: center;
+  margin: 0 auto;
+  width: 300px;
+  height: 400px;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
 }
 
 #result_image_proper {
-width: 300px;
-height: 300px;
-overflow: hidden;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
 }
 
 #result_image_proper img {
-margin: 0 auto;
-width: 100%;
+  margin: 0 auto;
+  width: 100%;
 }
 
 #result_content_wrapper {
-display: inline-block;
+  display: inline-block;
 }
 
 #result_content {
-margin: 0 auto;
-width: 300px;
-height: 400px;
-display: inline-block;
-vertical-align: middle;
+  margin: 0 auto;
+  width: 300px;
+  height: 400px;
+  display: inline-block;
+  vertical-align: middle;
 }
+
 #species_common_name {
-margin: 0 0 0 0;
+  margin: 0;
 }
+
 #species_sci_name {
-margin: 0 0 0 0;
+  margin: 0;
 }
 
 #attribution h2 {
-text-align: left;
-color: #F1DD9E;
-font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  text-align: left;
 }
+
 #attribution p {
-text-align: left;
-font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  text-align: left;
 }
