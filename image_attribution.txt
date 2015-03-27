@@ -1,4 +1,4 @@
-Image Attribution (all images public domain or licensed for non-commerical use through Creative Commons)
+Image Attribution (all images public domain or licensed for non-commercial use through Creative Commons)
 
 Bard Owl (BDOW) 
 Author: ForestWander 
@@ -90,6 +90,3 @@ Whiskered Screech-Owl (WHSO)
 Author: David Bygott 
 https://www.flickr.com/photos/davidbygott/4049307854/in/photolist-7aPL9E-d9trWJ-6tnGLg-cCvVPu-aeHAVT-6ucuNv-f2V1WA/ 
 CC BY-NC-SA 2.0
-
-
-Data is provided by the Cornell Lab of Ornithology through the eBird API.
